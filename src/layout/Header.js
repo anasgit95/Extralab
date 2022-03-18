@@ -3,7 +3,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
  import Typography from '@mui/material/Typography';
- 
+ import { useSelector } from 'react-redux'
+ import Badge from '@mui/material/Badge';
+
 import Container from '@mui/material/Container';
  import Button from '@mui/material/Button';
  import {
@@ -14,7 +16,8 @@ import Container from '@mui/material/Container';
 const pages = ['Home', 'Favorites'];
  
 const ResponsiveAppBar = () => {
-  
+      const favoriteFilms = useSelector((state) => state.favoriteFilms)
+
  
  
 
@@ -45,11 +48,21 @@ const ResponsiveAppBar = () => {
                 key={page}
                  sx={{ my: 2, color: 'white', display: 'block' }}
               >
+                     {page==="Favorites"? <Badge badgeContent={favoriteFilms.favoriteFilms.length} color="secondary">
+
                <Link  className='text-link' to={"/"+page}>               
                 {page}
                             
                             
                             </Link>
+                            </Badge>
+                            : <Link  className='text-link' to={"/"+page}>               
+                            {page}
+                                        
+                                        
+                                        </Link>
+                            }
+
               </Button>
             ))}
           </Box>

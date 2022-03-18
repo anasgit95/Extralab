@@ -52,8 +52,7 @@ function Home() {
         break;
       case 'Date':
         moviesToSort.sort((a, b) => new Date(b.Year.slice(0, b.Year.indexOf('–'))) - new Date(a.Year.slice(0, b.Year.indexOf('–'))))
-        console.log(moviesToSort.map(item => item.Year))
-        setListMovies(moviesToSort)        // expected output: "Mangoes and papayas are $2.79 a pound."
+        setListMovies(moviesToSort)
         break;
 
     }

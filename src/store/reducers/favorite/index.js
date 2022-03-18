@@ -5,12 +5,13 @@ const initialState = {
 };
 const favoriteReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_TO_FAVORITE:
-            return {
-                ...state,
-                favoriteFilms: action.payload,
+        case ADD_TO_FAVORITE: {
+            let data = [...state.favoriteFilms];
+            data.push(action.payload);
+            return { ...state, favoriteFilms: data };
 
-            };
+
+        }
 
 
         default:

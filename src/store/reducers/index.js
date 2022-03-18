@@ -3,7 +3,7 @@ import favoriteReducer from './favorite';
  
 // COMBINED REDUCERS
 const rootReducer = combineReducers({
-	favoriteReducer: favoriteReducer,
+	favoriteFilms: favoriteReducer,
  })
 
 export default rootReducer;
