@@ -1,21 +1,21 @@
 import { ADD_TO_FAVORITE } from '../../actions/actionsType';
 
 const initialState = {
-  favoriteFilms: [],
- };
+    favoriteFilms: [],
+};
 const favoriteReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_TO_FAVORITE:
-      return {
-        ...state,
-        customer: action.payload,
-     
-    };
+    switch (action.type) {
+        case ADD_TO_FAVORITE:
+            return {
+                ...state,
+                favoriteFilms: action.payload,
 
-    
-    default:
-      return state;
-  }
+            };
+
+
+        default:
+            return state;
+    }
 };
 
 export default favoriteReducer;

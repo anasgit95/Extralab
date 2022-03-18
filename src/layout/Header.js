@@ -14,17 +14,11 @@ import Container from '@mui/material/Container';
 const pages = ['Home', 'Favorites'];
  
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  
  
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
  
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
+ 
   
   return (
     <AppBar position="static" >
@@ -37,7 +31,7 @@ const ResponsiveAppBar = () => {
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
             <img 
-            
+            prop="logo"
             src="https://uploads-ssl.webflow.com/5feaf7c497cb0605ecb0f1d9/604276a0765c446df49e6d3b_logo-final-form-dark-p-2000.png" 
             className='extralabLogo'
             

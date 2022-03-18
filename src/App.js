@@ -10,7 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Provider } from 'react-redux';
-import { store } from './store/';
+import store from './store/index';
 
 function App() {
   return (
@@ -18,15 +18,15 @@ function App() {
 
     <Provider store={store}>
 
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/Favorites" element={<Favorites />} />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/Favorites" element={<Favorites />} />
 
-        <Route path="*" element={<Home />} />
+          <Route path="*" element={<Home />} />
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
     </Provider>
 
   );

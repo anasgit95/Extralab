@@ -125,3 +125,18 @@
   .card:hover .catagory {
     transform: translate(0);
   }
+
+  .buttonAdd{
+      margin-top: 10px;
+    position:absolute;
+    right:5px;
+    background-color: #25394c;
+    border: none;
+    color: white;
+    opacity: 10 !important;
+    border-radius: 10px;
+    z-index: 5;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+   }

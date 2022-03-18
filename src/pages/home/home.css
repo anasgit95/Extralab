@@ -1,9 +1,25 @@
 .home{
     text-align:center;
     margin:20px;
-}
+    display: block;
+    justify-content: center;
+    position: relative;
+    width: "100%";
+ }
 
 .searchButton{
     margin-bottom:10px;
  
 }
+
+.selectcss{
+position:absolute;
+right: 0;
+top: -14px;
+}
+
+.divLoader {
+    display: flex;
+    justify-content: center;
+  }
+
