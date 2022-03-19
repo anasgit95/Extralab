@@ -51,6 +51,7 @@ function Home() {
         setListMovies(moviesToSort)
         break;
       case 'Date':
+        console.log(moviesToSort.map(item=>console.log( item.Year.indexOf('–'))))
         moviesToSort.sort((a, b) => new Date(b.Year.slice(0, b.Year.indexOf('–'))) - new Date(a.Year.slice(0, b.Year.indexOf('–'))))
         setListMovies(moviesToSort)
         break;
