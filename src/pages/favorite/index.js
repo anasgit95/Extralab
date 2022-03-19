@@ -7,7 +7,7 @@
      return (
       <div>
         <h1 style={{textAlign:"center"}}> Mes films préférés </h1>
-         <MoviesList movies={favoriteFilms.favoriteFilms} />
+         <MoviesList movies={favoriteFilms.favoriteFilms}  favorite={true}/>
 
       
       

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
  
  import Card from '../../components/CardMovie'
-export default function MoviesList({movies}) {
+export default function MoviesList({movies,favorite}) {
  
  
 
@@ -13,7 +13,7 @@ export default function MoviesList({movies}) {
         <Grid container justifyContent="center" spacing={2}>
           {movies.map((movie) => (
             <Grid key={movie} item >
-            <Card movie={movie}/>
+            <Card movie={movie} favorite={favorite}/>
             </Grid>
           ))}
         </Grid>

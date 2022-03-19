@@ -31,7 +31,7 @@ function MovieDetails({ movie }) {
     return (
         <div className="movie-card">
             <div className="container">
-                <a href="#"><img src={Poster} alt="cover" className="cover" /></a>
+               <img src={Poster} alt="cover" className="cover" /> 
                 <div className='hero'
 
 
@@ -65,7 +65,7 @@ function MovieDetails({ movie }) {
 
                         {listeDesCommentaire.map(item =>
                             <div class="res">
-                                <img className="imageCommentaire" src="https://lh3.googleusercontent.com/ogw/ADea4I7r_cy2tSTeFxB9KMZlGW9yPvGIzmcZFenJMpRBIQ=s32-c-mo" />
+                                <img alt="imageCommentaire" className="imageCommentaire" src="https://lh3.googleusercontent.com/ogw/ADea4I7r_cy2tSTeFxB9KMZlGW9yPvGIzmcZFenJMpRBIQ=s32-c-mo" />
                                 <div class="text"><h5>Anas Zayene </h5>
                                     <p> {item.text}</p></div>
                                 <span className='timecomment'> {moment(item.date).startOf('minute').fromNow()}</span>

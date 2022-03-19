@@ -54,6 +54,7 @@ function Home() {
         moviesToSort.sort((a, b) => new Date(b.Year.slice(0, b.Year.indexOf('–'))) - new Date(a.Year.slice(0, b.Year.indexOf('–'))))
         setListMovies(moviesToSort)
         break;
+        default:return "ok"
 
     }
   }
@@ -68,7 +69,7 @@ function Home() {
         <MoviesList movies={movies} />
         : <div className="divLoader" >
           <img
-            prop="logo"
+            alt="logo"
             src="https://uploads-ssl.webflow.com/5feaf7c497cb0605ecb0f1d9/604276a0765c446df49e6d3b_logo-final-form-dark-p-2000.png"
             className='rotate'
 

@@ -12,7 +12,8 @@ function Movie() {
     const { id } = useParams();
     const [movie, setMovie] = useState();
     const [loader, setLoader] = useState(true);
-    const getMovieById = () => {
+  
+    useEffect(() => {
         axios.get(key + "i="+id).then(response => {
             console.log(response)
             if (response && response.data) {
@@ -23,18 +24,14 @@ function Movie() {
             }
         }
         )
-    }
-    useEffect(() => {
-        getMovieById()
-    }, []);
-    console.log(id)
-    return (
+    }, [id]);
+     return (
         <div>
             {!loader ?
                 <MovieDetails movie={movie} />
                 : <div className="divLoader" >
                     <img
-                        prop="logo"
+                        alt="logo"
                         src="https://uploads-ssl.webflow.com/5feaf7c497cb0605ecb0f1d9/604276a0765c446df49e6d3b_logo-final-form-dark-p-2000.png"
                         className='rotate'
 
