@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './store/index';
+import Movie from './pages/movie'
+import Statistique from './pages/statistique'
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/Movie/:id" element={<Movie />} />
+          <Route path="/Statistiques" element={<Statistique />} />
 
           <Route path="*" element={<Home />} />
 

@@ -4,8 +4,9 @@ import './card.css'
 import ParticleEffectButton from 'react-particle-effect-button'
 import {addToFavorite} from '../../store/actions/action'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom';
 
-function Favorites({ movie }) {
+function CardMovie({ movie }) {
   const dispatch = useDispatch()
 
   const [hidden, setHidden] = useState(false);
@@ -15,8 +16,9 @@ function Favorites({ movie }) {
     e.preventDefault()
     setHidden(true)
     dispatch(addToFavorite(movie))
+
   }
-  return (
+   return (
     <div className="card">
       <ParticleEffectButton
         color='#121019'
@@ -29,19 +31,18 @@ function Favorites({ movie }) {
         ><i class="fa fa-plus" ></i> Ajouter au favoris</div>
 
       </ParticleEffectButton>
-      <a href="#">
+      <Link to={"/Movie/"+imdbID}>
         <div className="img1" style={{ backgroundImage: `url(${Poster})` }}></div>
         <div className="img2" style={{ backgroundImage: `url(${Poster})` }}></div>
         <div className="title">{Title}</div>
-        <div className="text">{Title}</div>
-        <a href="#"><div className="catagory">{Type} <i className="fas fa-film"></i></div></a>
+         <a href="#"><div className="catagory">{Type} <i className="fas fa-film"></i></div></a>
         <a href="#"><div className="views">{Year}  <i className="far fa-eye"></i> </div></a>
 
-      </a>
+      </Link>
 
 
     </div>
   );
 }
 
-export default Favorites;
+export default CardMovie;
